@@ -1,0 +1,33 @@
+An interface is a completely "abstract class", which can only contain abstract methods and properties (with empty bodies):
+
+An interface class look like 
+interface IExampleInterface
+{
+    void ExampleMethod();
+    int ExampleProperty { get; set; }
+    event EventHandler ExampleEvent;
+}
+In contrast, a base class is a class that other classes can inherit from to reuse its code and extend its functionality. Base classes can provide default implementations of methods and properties that derived classes can override or extend.
+
+A base class declaration looks like this:
+class ExampleBaseClass
+{
+    public virtual void ExampleMethod()
+    {
+        // Default implementation of method
+    }
+
+    public virtual int ExampleProperty { get; set; }
+}
+
+When to use an interface:
+
+When you want to define a common set of behaviors or capabilities that multiple unrelated classes can implement.
+When you want to create a pluggable architecture, where different implementations of an interface can be swapped in and out without changing the calling code.
+When you want to enforce a contract on classes that implement the interface, ensuring that they have certain methods, properties, or events.
+
+When to use a base class:
+
+When you want to reuse code and behavior across multiple related classes that share a common structure or hierarchy.
+When you want to provide default implementations of methods or properties that derived classes can optionally override or extend.
+When you want to create a specialized version of a more general class, where the derived class inherits all the functionality of the base class and adds or overrides specific behavior.
